@@ -1,2 +1,8 @@
 _site
 .sass-cache
+node_modules
+.smb
+.sass-cache
+bluebeam.sublime-workspace
+bluebeam.sublime-project
+.DS_Store

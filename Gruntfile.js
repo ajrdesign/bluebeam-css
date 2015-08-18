@@ -34,18 +34,7 @@ module.exports = function(grunt) {
                 }
             }
         },*/
-        // Copy changed files from the sass folder into the Docs folders so they remain constantly up to date
-        copy: {
-          main: {
-            files: [
-              // includes files within path 
-              {expand: true,
-               cwd: 'sass/core/', 
-               src: ['**/*'], 
-               dest: 'docs/_sass/'}
-            ],
-          },
-        },
+        
         postcss: {
             options: {
                 map: true,
@@ -56,7 +45,7 @@ module.exports = function(grunt) {
                 ] 
             },
             dist: {
-                src: '*.min.css'
+                src: 'css/*.css'
             }
         },
         // Automatically run tasks when certain files are updated.
@@ -74,7 +63,7 @@ module.exports = function(grunt) {
                         'sass/core/atoms/*.scss',
                         'sass/core/organisms/*.scss',
                         'sass/core/molecules/*.scss'],
-                tasks: ['sass', 'copy', 'postcss'],
+                tasks: ['sass', 'postcss'],
                 options: {
                     spawn: false,
                 },
@@ -92,6 +81,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', [/*'concat',*/'sass', 'postcss', /*'uglify',*/ 'copy', 'watch']);
+    grunt.registerTask('default', [/*'concat',*/'sass', 'postcss', /*'uglify',*/ 'watch']);
 
 };
