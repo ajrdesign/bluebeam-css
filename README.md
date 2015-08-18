@@ -8,8 +8,11 @@ This is the main styles you'll need for a Bluebeam project. This should always b
 
 It's best to use this as a submodule in your project, that way any updates are quickly accessible. To do this you can clone the repo into your project the command line:
 
-$ git submodule add [HTTPS, SSH or Subversion] [Folder Location]
+	$ git submodule add [HTTPS, SSH or Subversion] [Folder Location]
 
+To get the latest version from this repo use use the command:
+	
+	git submodule update --remote
 
 Copyright and license
 ---------------------
