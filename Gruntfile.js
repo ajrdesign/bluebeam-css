@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // Output:Input (Yes backwards I know...)
-                    'bluebeam-core.css': 'sass/core/core-import.scss'
+                    'bluebeam-core.css': 'sass/core-import.scss'
                 }
             } 
         },
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                 ] 
             },
             dist: {
-                src: 'css/*.css'
+                src: '*.css'
             }
         },
         // Automatically run tasks when certain files are updated.
@@ -58,11 +58,11 @@ module.exports = function(grunt) {
                 },
             },*/
             sass: {
-                files: ['sass/core/*.scss',
-                        'sass/core/basics/*.scss', 
-                        'sass/core/atoms/*.scss',
-                        'sass/core/organisms/*.scss',
-                        'sass/core/molecules/*.scss'],
+                files: ['sass/*.scss',
+                        'sass/basics/*.scss', 
+                        'sass/atoms/*.scss',
+                        'sass/organisms/*.scss',
+                        'sass/molecules/*.scss'],
                 tasks: ['sass', 'postcss'],
                 options: {
                     spawn: false,
